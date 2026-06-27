@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>استودیو عاشورا</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- =========================
+BACKGROUND
+========================= -->
+
+<div class="background"></div>
+
+<!-- =========================
+LOADER
+========================= -->
+
+<div id="loader">
+
+<div class="spinner"></div>
+
+<h2>
+
+در حال بارگذاری استودیو عاشورا...
+
+</h2>
+
+</div>
+
+<!-- =========================
+WELCOME MODAL
+========================= -->
+
+<div id="welcomeModal">
+
+<div class="modal-box">
+
+<button id="closeModal">
+
+✕
+
+</button>
+
+<img
+src="assets/logo.png"
+alt="Studio Ashura">
+
+<h2>
+
+به استودیو عاشورا خوش آمدید
+
+</h2>
+
+<p>
+
+مرجع مداحی‌های مذهبی
+
+</p>
+
+</div>
+
+</div>
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header>
+
+<div class="logo-area">
+
+<img
+src="assets/logo.png"
+alt="logo">
+
+<h1>
+
+استودیو عاشورا
+
+</h1>
+
+</div>
+
+<div id="clock">
+
+00:00
+
+</div>
+
+</header>
+
+<!-- =========================
+SEARCH
+========================= -->
+
+<div class="search-box">
+
+<input
+
+type="text"
+
+id="searchInput"
+
+placeholder="جستجوی مداحی..."
+
+>
+
+</div>
+
+<!-- =========================
+MAIN MENU
+========================= -->
+
+<section class="menu-section">
+
+<div
+class="menu-card"
+id="newSongsBtn">
+
+🎵
+
+<h3>
+
+مداحی های جدید
+
+</h3>
+
+</div>
+
+<div
+class="menu-card"
+id="categoriesBtn">
+
+📂
+
+<h3>
+
+دسته بندی ها
+
+</h3>
+
+</div>
+
+<div
+class="menu-card"
+id="favoritesBtn">
+
+❤️
+
+<h3>
+
+علاقه مندی ها
+
+</h3>
+
+</div>
+
+<div
+class="menu-card"
+id="popularBtn">
+
+🔥
+
+<h3>
+
+پرطرفدارها
+
+</h3>
+
+</div>
+
+<div
+class="menu-card"
+id="aboutBtn">
+
+ℹ️
+
+<h3>
+
+درباره ما
+
+</h3>
+
+</div>
+
+</section>
+<!-- =========================
+NEW SONGS MODAL
+========================= -->
+
+<div
+class="custom-modal"
+id="newSongsModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>مداحی های جدید</h2>
+
+<div id="newSongsList"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+CATEGORIES
+========================= -->
+
+<div
+class="custom-modal"
+id="categoriesModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>دسته بندی ها</h2>
+
+<div class="category-btn" id="studioBtn">
+🎙 مداحی استودیویی
+</div>
+
+<div class="category-btn" id="emotionalBtn">
+🥺 مداحی احساسی
+</div>
+
+<div class="category-btn" id="rozeBtn">
+🖤 روضه
+</div>
+
+<div class="category-btn" id="turkishBtn">
+🇹🇷 ترکی
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+STUDIO CATEGORY
+========================= -->
+
+<div
+class="custom-modal"
+id="studioModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>🎙 مداحی استودیویی</h2>
+
+<div id="studioList"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+EMOTIONAL CATEGORY
+========================= -->
+
+<div
+class="custom-modal"
+id="emotionalModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>🥺 مداحی احساسی</h2>
+
+<div id="emotionalList"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+ROZE CATEGORY
+========================= -->
+
+<div
+class="custom-modal"
+id="rozeModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>🖤 روضه</h2>
+
+<div id="rozeList"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+TURKISH CATEGORY
+========================= -->
+
+<div
+class="custom-modal"
+id="turkishModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>🇹🇷 مداحی ترکی</h2>
+
+<div id="turkishList"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+FAVORITES
+========================= -->
+
+<div
+class="custom-modal"
+id="favoritesModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>❤️ علاقه مندی ها</h2>
+
+<div id="favoritesList">
+
+<!-- توسط JS پر می‌شود -->
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+POPULAR
+========================= -->
+
+<div
+class="custom-modal"
+id="popularModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>🔥 پرطرفدارها</h2>
+
+<div id="popularList"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+ABOUT
+========================= -->
+
+<div
+class="custom-modal"
+id="aboutModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>درباره ما</h2>
+
+<p style="line-height:2">
+
+استودیو عاشورا
+
+<br><br>
+
+طراحی و توسعه توسط:
+
+<b>ARM</b>
+
+<br><br>
+
+مرجع مداحی‌های مذهبی با طراحی مدرن و نئونی.
+
+</p>
+
+</div>
+
+</div>
+<!-- =========================
+PLAYER MODAL
+========================= -->
+
+<div
+class="custom-modal"
+id="playerModal">
+
+<div
+class="modal-content player-box">
+
+<span
+class="close"
+id="closePlayer">
+
+✕
+
+</span>
+
+<!-- COVER -->
+
+<img
+
+id="coverImage"
+
+src="assets/logo.png"
+
+alt="cover"
+
+>
+
+<!-- TITLE -->
+
+<h2 id="songName">
+
+مداحی انتخاب نشده
+
+</h2>
+
+<!-- VISUALIZER -->
+
+<div class="visualizer">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- TIME -->
+
+<div class="time-box">
+
+<span id="currentTime">
+
+0:00
+
+</span>
+
+<span id="duration">
+
+0:00
+
+</span>
+
+</div>
+
+<!-- PROGRESS BAR -->
+
+<div
+class="progress-container"
+id="progressContainer">
+
+<div id="progressBar"></div>
+
+</div>
+
+<!-- PLAYER BUTTONS -->
+
+<div class="player-buttons">
+
+<button id="prevBtn">
+
+⏮
+
+</button>
+
+<button id="playPause">
+
+▶
+
+</button>
+
+<button id="nextBtn">
+
+⏭
+
+</button>
+
+</div>
+
+<!-- ACTIONS -->
+
+<div class="player-actions">
+
+<button id="likeBtn">
+
+❤️
+
+</button>
+
+<a
+
+id="downloadBtn"
+
+download
+
+>
+
+⬇ دانلود
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div
+id="favoriteSuccessModal"
+class="custom-modal">
+
+<div class="modal-content">
+
+<h2>
+
+❤️ مداحی افزوده شد
+
+</h2>
+
+<p id="favoriteSuccessText">
+
+</p>
+
+<button
+id="favoriteSuccessClose">
+
+باشه
+
+</button>
+
+</div>
+
+</div>
+
+<div
+class="custom-modal"
+id="searchModal">
+
+<div class="modal-content">
+
+<span class="close">✕</span>
+
+<h2>
+
+🔍 نتایج جستجو
+
+</h2>
+
+<div id="searchResults">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- AUDIO -->
+
+<audio
+id="player"
+preload="metadata">
+
+</audio>
+
+<!-- SCRIPT -->
+
+<script src="script.js"></script>
+
+<!-- FAVORITE SUCCESS MODAL -->
+
+
+</body>
+
+</html>
